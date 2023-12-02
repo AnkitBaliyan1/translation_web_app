@@ -28,7 +28,7 @@ def main():
             'output': [""] * 4  
         })
     st.write(sample_df)
-    st.write("Note: Enter your data in Input column. \n Column name should be "input" and "output" ")
+    st.write("Note: Enter your data in Input column. \n Column name should be \"input\" and \"output\" ")
 
     # File uploader
     uploaded_file = st.file_uploader("Upload a file (CSV or Excel)", type=["csv", "xlsx"])
