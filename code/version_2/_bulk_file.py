@@ -24,7 +24,7 @@ def main():
     st.title("Bulk file translation")
 
     # Display a sample dataframe
-    st.write("Sample DataFrame:")
+    st.write("Sample input file format:")
     sample_df = pd.DataFrame({
             'input': [
                 "यहां नमूना पाठ दर्ज करें",    # Hindi
@@ -34,8 +34,8 @@ def main():
             ],
             'output': [""] * 4  # Empty strings for output column
         })
-    st.write("Enter your data in Input column.")
     st.write(sample_df)
+    st.write("Note: Enter your data in Input column.")
 
     # File uploader
     uploaded_file = st.file_uploader("Upload a file (CSV or Excel)", type=["csv", "xlsx"])
@@ -44,17 +44,23 @@ def main():
         # Read the file
         if uploaded_file.name.endswith('.csv'):
             df = pd.read_csv(uploaded_file)
-        else:
+            run=True
+        elif uploaded_file.name.endwith('xlsx'):
             df = pd.read_excel(uploaded_file)
+            run=True
+        else:
+            st.error("Incorrect file format")
+            run=False
 
-        # Perform operation on 'input' column
-        df['output'] = df['input'].apply(lambda x: x + " processed")  # Replace with your operation
+        if run:
+            # Perform operation on 'input' column
+            df['output'] = df['input'].apply(lambda x: x + " processed")  # Replace with your operation
 
-        # Show processed DataFrame
-        st.write("Processed DataFrame:")
-        st.write(df)
+            # Show processed DataFrame
+            st.write("Processed DataFrame:")
+            st.write(df)
 
-        # Download link
-        st.markdown(get_table_download_link(df, 'processed_data.csv', 'Download Processed Data as CSV'), unsafe_allow_html=True)
+            # Download link
+            st.markdown(get_table_download_link(df, 'processed_data.csv', 'Download Processed Data as CSV'), unsafe_allow_html=True)
 
     
