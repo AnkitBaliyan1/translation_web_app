@@ -25,10 +25,10 @@ def main():
                 "हांव नमुना पाठ दाखल करा",     # Konkani
                 "ਇੱਥੇ ਨਮੂਨਾ ਪਾਠ ਦਰਜ ਕਰੋ"     # Punjabi
             ],
-            'output': [""] * 4  # Empty strings for output column
+            'output': [""] * 4  
         })
     st.write(sample_df)
-    st.write("Note: Enter your data in Input column.")
+    st.write("Note: Enter your data in Input column. \n Column name should be "input" and "output" ")
 
     # File uploader
     uploaded_file = st.file_uploader("Upload a file (CSV or Excel)", type=["csv", "xlsx"])
