@@ -25,7 +25,15 @@ def main():
 
     # Display a sample dataframe
     st.write("Sample DataFrame:")
-    sample_df = pd.DataFrame(columns=['input', 'output'])
+    sample_df = pd.DataFrame({
+            'input': [
+                "यहां नमूना पाठ दर्ज करें",    # Hindi
+                "এখানে নমুনা পাঠ্য লিখুন",    # Bengali
+                "हांव नमुना पाठ दाखल करा",     # Konkani
+                "ਇੱਥੇ ਨਮੂਨਾ ਪਾਠ ਦਰਜ ਕਰੋ"     # Punjabi
+            ],
+            'output': [""] * 4  # Empty strings for output column
+        })
     st.write("Enter your data in Input column.")
     st.write(sample_df)
 
