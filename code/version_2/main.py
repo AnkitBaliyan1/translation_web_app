@@ -58,11 +58,12 @@ def main_app():
         """, unsafe_allow_html=True)
 
     with st.sidebar:
-        selected = option_menu("Main Menu", 
-                ["About", "Translate - One liner", "Bulk Translate","Info", "Contact Us"],
-            icons=['house', 'globe', 'filetype-csv', 'info', 'envelope'],
-            menu_icon="cast", default_index=0,
-            orientation = "horizontal")
+        pass
+    selected = option_menu("Main Menu", 
+            ["About", "Translate - One liner", "Bulk Translate","Info", "Contact Us"],
+        icons=['house', 'globe', 'filetype-csv', 'info', 'envelope'],
+        menu_icon="cast", default_index=0,
+        orientation = "horizontal")
 
     if selected == 'About':
         _about.main()
