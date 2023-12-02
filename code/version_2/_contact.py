@@ -3,7 +3,7 @@ import streamlit as st
 
 def main():
     st.title('Contact Us')
-    st.subheader('Ping me at: 9958631596')
+    st.subheader('Ping me at: +91-9958631596')
     footer_style = """
             <style>
             .footer {
