@@ -13,9 +13,6 @@ def get_table_download_link(df, filename, text):
     return href
 
 
-
-
-
 def main():
     st.title("Bulk file translation")
 
@@ -49,12 +46,13 @@ def main():
             run=False
 
         if run:
-            # Perform operation on 'input' column
-            df['output'] = df['input'].apply(lambda x: generate_response(user_input=x))  # Replace with your operation
+            with st.spinner():
+                # Perform operation on 'input' column
+                df['output'] = df['input'].apply(lambda x: generate_response(user_input=x))  # Replace with your operation
 
-            # Show processed DataFrame
-            st.write("Processed DataFrame:")
-            st.write(df)
+                # Show processed DataFrame
+                st.write("Processed DataFrame:")
+                st.write(df)
 
             # Download link
             st.markdown(get_table_download_link(df, 'processed_data.csv', 'Download Processed Data as CSV'), unsafe_allow_html=True)
