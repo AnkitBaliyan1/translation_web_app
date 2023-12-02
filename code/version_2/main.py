@@ -10,7 +10,8 @@ st.title("Web Translation For Aangan Trust")
 users = {
     "admin": "password123",
     "user1": "mypassword",
-    "kunal": "weEkpassword"
+    "kunal": "weEkpassword",
+    'aangan': "weEkpassword"
 }
 
 # Define functions for each page
