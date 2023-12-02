@@ -1,16 +1,9 @@
 import streamlit as st
 import pandas as pd
-
-def main():
-    st.title("Bulk file translation")
-
-    dummy_df = pd.DataFrame()
-
-
-import streamlit as st
-import pandas as pd
 import io
 import base64
+from _translate_liner import generate_message, generate_response
+from openai._client import OpenAI
 
 # Function to download data
 def get_table_download_link(df, filename, text):
@@ -18,6 +11,9 @@ def get_table_download_link(df, filename, text):
     b64 = base64.b64encode(csv.encode()).decode()
     href = f'<a href="data:file/csv;base64,{b64}" download="{filename}">{text}</a>'
     return href
+
+
+
 
 
 def main():
@@ -54,7 +50,7 @@ def main():
 
         if run:
             # Perform operation on 'input' column
-            df['output'] = df['input'].apply(lambda x: x + " processed")  # Replace with your operation
+            df['output'] = df['input'].apply(lambda x: generate_response(user_input=x))  # Replace with your operation
 
             # Show processed DataFrame
             st.write("Processed DataFrame:")
