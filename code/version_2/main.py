@@ -4,10 +4,6 @@ import _about, _bulk_file, _translate_liner, _contact
 
 st.title("Web Translation For Aangan Trust")
 
-st.set_page_config(
-    page_title="Aangan_translator",
-    page_icon="translate"
-)
 
 
 # Dummy user data
