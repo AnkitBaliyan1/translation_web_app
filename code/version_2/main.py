@@ -1,6 +1,5 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
-import about, user_file_model, data_base_model
 import _about, _bulk_file, _translate_liner, _contact
 
 st.title("Web Translation For Aangan Trust")
@@ -68,7 +67,7 @@ def main_app():
             menu_icon="cast", default_index=0)
 
     if selected == 'About':
-        about.main()
+        _about.main()
     elif selected == 'Translate - One liner':
         _translate_liner.main()
     elif selected == "Bulk Translate":
