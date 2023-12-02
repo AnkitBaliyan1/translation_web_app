@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import io
 import base64
 from _translate_liner import generate_message, generate_response
 from openai._client import OpenAI
