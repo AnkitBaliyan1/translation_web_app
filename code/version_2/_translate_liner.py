@@ -5,7 +5,7 @@ API_KEY = st.secrets['OPENAI_API']
 client = OpenAI(api_key=API_KEY)
 
 
-def generate_message(system_input, user_input):
+def generate_message(user_input):
 
     system_input = "You are a language expert who can translate any language into English.\
         Whatever the user input you will get, you just need to translate into basic English sentense without using complex words."
