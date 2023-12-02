@@ -11,7 +11,12 @@ users = {
     "admin": "password123",
     "user1": "mypassword",
     "kunal": "weEkpassword",
-    'aangan': "weEkpassword"
+    "aangan": "weEkpassword",
+    "djyoti": "weEkpassword",
+    "nayan": "weEkpassword",
+    "sgeorge": "weEkpassword",
+    "oindrila": "weEkpassword",
+    "maheshwari": "weEkpassword"
 }
 
 # Define functions for each page
