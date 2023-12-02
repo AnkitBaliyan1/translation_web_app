@@ -59,7 +59,7 @@ def main_app():
 
     with st.sidebar:
         pass
-    selected = option_menu("None", 
+    selected = option_menu(None, 
             ["About", "Translate - One liner", "Bulk Translate","Info", "Contact Us"],
         icons=['house', 'globe', 'filetype-csv', 'info', 'envelope'],
         menu_icon="cast", default_index=0,
