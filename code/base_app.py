@@ -1,8 +1,8 @@
 import streamlit as st
 from openai import OpenAI
 
-
-client = OpenAI(api_key="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")
+API_KEY = st.secrets('OPENAI_API')
+client = OpenAI(api_key=API_KEY)
 
 
 def generate_message(system_input, user_input):
