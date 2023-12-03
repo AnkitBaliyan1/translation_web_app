@@ -6,7 +6,7 @@ st.title("Web Translation For Aangan Trust")
 
 
 
-# Dummy user data
+
 users = {
     "admin": "password123",
     "user1": "mypassword",
