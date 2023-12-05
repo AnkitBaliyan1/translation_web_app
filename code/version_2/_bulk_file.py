@@ -30,7 +30,7 @@ def main():
     st.write("Note: Enter your data in Input column. \n Column name should be \"input\" and \"output\" ")
 
     # File uploader
-    uploaded_file = st.file_uploader("Upload a file (CSV or Excel)", type=["csv", "xlsx"])
+    uploaded_file = st.file_uploader("Upload a file (CSV only)", type=["csv"])
 
     if uploaded_file is not None:
         # Read the file
