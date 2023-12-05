@@ -37,7 +37,7 @@ def main():
         if uploaded_file.name.endswith('.csv'):
             df = pd.read_csv(uploaded_file)
             run=True
-        elif uploaded_file.name.endwith('xlsx'):
+        elif uploaded_file.name.endswith('xlsx'):
             df = pd.read_excel(uploaded_file)
             run=True
         else:
