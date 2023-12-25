@@ -1,8 +1,11 @@
-# Universal Translator Streamlit-App for Aangan Trust
+# Universal Translator Streamlit-App
 
 ## Overview
 
 The Universal Translator App is a versatile and powerful tool that allows users to translate text from any language into English seamlessly. Built on top of the OpenAI API and deployed using Streamlit, this application offers two modes for translation: text translation and file-based translation. Whether you need quick translations for a single phrase or want to process entire documents, this app has you covered.
+
+## App link: 
+The app is accessible only via invite link. If you wish to use the application, please write to me.
 
 ## Features
 
